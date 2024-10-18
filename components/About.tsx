@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
-import pic from "../image2.jpg";
+import pic from "../image2.png";
 
 const SkillBar = ({ skill, level }) => (
   <div className="mb-4">
@@ -35,7 +35,10 @@ export default function About() {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-br from-grey-50 to-indigo-100 dark:from-gray-800 dark:to-gray-900">
+    <section
+      id="about"
+      className="py-16 bg-gradient-to-br from-grey-50 to-red-100 dark:from-gray-800 dark:to-red-20 round"
+    >
       <div className="container mx-auto px-4">
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-2xl overflow-hidden">
           <div className="md:flex">

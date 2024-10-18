@@ -44,7 +44,10 @@ export default function Contact() {
   };
 
   return (
-    <section className="py-16 bg-gradient-to-br from-blue-50 to-indigo-100">
+    <section
+      id="contact"
+      className="py-16 bg-gradient-to-br from-blue-50 to-indigo-100"
+    >
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-8 text-center text-gray-800">
           Contact Me

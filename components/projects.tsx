@@ -15,9 +15,10 @@ const ProjectCard = ({ title, description, technologies, link }) => (
       ))}
     </div>
     <a
-      href={link}
+      // href={link}
+      href="/project/1"
       className="text-blue-500 hover:text-blue-700 font-medium"
-      target="_blank"
+      target="_self"
       rel="noopener noreferrer"
     >
       View Project
@@ -51,7 +52,7 @@ const Projects = () => {
   ];
 
   return (
-    <section className="py-16 bg-gray-100">
+    <section id="projects" className="py-16 bg-gray-100">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-8 text-center">My Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

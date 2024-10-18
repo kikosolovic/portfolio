@@ -18,10 +18,66 @@ body {
   /* color: var(--foreground);
   background: var(--background); */
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+  /* styles/globals.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navbar {
+  background-color: rgba(255, 255, 255, 0.3); /* Optional background color */
+  backdrop-filter: blur(0px);
+}
+
+.backdrop-blur-gradient {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.4), /* Top less transparent */
+    rgba(255, 255, 255, 0.2) /* Bottom more transparent */
+  );
+  backdrop-filter: blur(10px);
+}
+
+.sliderBody{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    margin: Orem; 
+    overflow: hidden; 
+}
+#image-track > .image {
+  width: 20vw;
+  height: 30vw;
+  object-fit: cover;
+  object-position: center;
+  
+}
+#image-track {
+  display: flex;
+  gap:1%;
+
+  position: relative;
+  left: 0%;
+  top: 50%;
+  transform: translate(0, -50%);
+  user-select: none;
+}
+  html{
+    scroll-behavior: smooth;;
+  }
+.sued{
+  width: 80vw;
+  height: 32vw;
+  object-fit: center;
+  object-position: center;
+
 }

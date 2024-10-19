@@ -10,6 +10,7 @@
 import About from "@/components/About";
 import Projects from "@/components/projects";
 import Skills from "@/components/skills";
+import SliderPro from "@/components/ui/SliderPro";
 // import Contact from "@/components/Contact";
 
 export default function Home() {
@@ -18,7 +19,7 @@ export default function Home() {
       <About></About>
       <Skills></Skills>
       <Projects></Projects>
-      {/* <Contact></Contact> */}
+      <SliderPro></SliderPro>;{/* <Contact></Contact> */}
     </div>
   );
 }

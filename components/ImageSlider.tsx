@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-export default function ImageSlider({ images }: { images: string[] }) {
+export default function ImageSlider({ images }: { images: StaticImageData[] }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const prevSlide = () => {

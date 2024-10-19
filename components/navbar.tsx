@@ -3,7 +3,7 @@ import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa"; // Icons for hamburger and close
 import { usePathname } from "next/navigation";
 
-function toggleMenu() {}
+// function toggleMenu() {}
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 

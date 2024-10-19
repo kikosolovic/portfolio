@@ -109,8 +109,8 @@ import ImageSlider from "@/components/ImageSlider";
 import pic from "../../../vector-art-project-svg-eps-862423341.jpg";
 import ima from "../../../image6.png";
 import ima2 from "../../../image2.jpg";
-import HomeButton from "@/components/ui/HomeButton";
-import SliderPro from "@/components/ui/SliderPro";
+// import HomeButton from "@/components/ui/HomeButton";
+// import SliderPro from "@/components/ui/SliderPro";
 
 // Dummy data (replace with actual data fetching in a real application)
 const projectData = {
@@ -124,7 +124,8 @@ const projectData = {
   githubLink: "https://github.com/username/project-repo",
 };
 
-export default function ProjectPage({ params }: { params: { id: string } }) {
+// { params }: { params: { id: string } }
+export default function ProjectPage() {
   const project = projectData;
 
   return (

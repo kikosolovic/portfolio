@@ -3,8 +3,12 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 import pic from "../image2.png";
+interface skilllevrl {
+  skill: string;
+  level: number;
+}
 
-const SkillBar = ({ skill, level }) => (
+const SkillBar = ({ skill, level }: skilllevrl) => (
   <div className="mb-4">
     <div className="flex justify-between mb-1">
       <span className="text-base font-medium text-blue-700 dark:text-white">
@@ -113,24 +117,24 @@ export default function About() {
               {activeTab === "about" ? (
                 <div className="space-y-4 text-gray-600 dark:text-gray-300">
                   <p>
-                    Hello! I'm a passionate full stack developer with over 5
-                    years of experience in creating robust and scalable web
-                    applications. My journey in the world of coding began with a
-                    fascination for problem-solving and has evolved into a love
-                    for crafting intuitive user experiences backed by solid,
-                    efficient code.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dicta odio aperiam nostrum vero labore rerum consequatur
+                    voluptas perspiciatis consequuntur modi, minus fuga,
+                    molestias quae inventore exercitationem ipsum optio ex
+                    delectus?
                   </p>
                   <p>
-                    I specialize in JavaScript ecosystems, particularly React
-                    for front-end and Node.js for back-end development. I'm also
-                    proficient in Python and have a strong foundation in
-                    database management with SQL and NoSQL solutions.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Expedita impedit explicabo doloribus excepturi voluptates
+                    cupiditate vitae rem atque, recusandae placeat inventore qui
+                    quam repudiandae nihil eveniet, architecto quo facere
+                    necessitatibus.
                   </p>
                   <p>
-                    When I'm not coding, you can find me contributing to
-                    open-source projects, mentoring aspiring developers, or
-                    exploring the latest tech trends. I'm always eager to take
-                    on new challenges and continue growing as a developer.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Exercitationem, incidunt dolores maxime accusamus delectus
+                    quam hic nihil ut expedita sint enim odio repudiandae, ad
+                    magnam officiis blanditiis! Ratione, saepe perferendis.
                   </p>
                 </div>
               ) : (

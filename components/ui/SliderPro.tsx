@@ -40,7 +40,7 @@ export default function SliderPro() {
             );
           const percent = (lenImages - 1) * 0.01;
           const rep = (lenImages - 5) / 5 + percent;
-          const sizeDif = 1.25;
+          // const sizeDif = 1.25;
           console.log(rep);
           // nextPercentageI = Math.max(
           //   Math.min(nextPercentageUnconstrained - (lenImages + 2) * 1, 0),

@@ -1,10 +1,14 @@
 import React from "react";
 import { FaCode, FaDatabase, FaServer, FaCogs } from "react-icons/fa";
+interface SkillCategory {
+  title: string;
+  skills: string[];
+  icon: React.ComponentType;
+}
 
-const SkillCategory = ({ title, skills, icon: Icon }) => (
+const SkillCategory = ({ title, skills }: SkillCategory) => (
   <div className="bg-white rounded-lg shadow-md p-6">
     <div className="flex items-center mb-4">
-      <Icon className="w-6 h-6 mr-2 text-blue-500" />
       <h3 className="text-xl font-semibold">{title}</h3>
     </div>
     <ul className="space-y-2">

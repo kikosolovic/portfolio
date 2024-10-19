@@ -1,6 +1,11 @@
 import React from "react";
+interface Project {
+  title: string;
+  description: string;
+  technologies: string[];
+}
 
-const ProjectCard = ({ title, description, technologies, link }) => (
+const ProjectCard = ({ title, description, technologies }: Project) => (
   <div className="bg-white rounded-lg shadow-md p-6 mb-6">
     <h3 className="text-xl font-semibold mb-2">{title}</h3>
     <p className="text-gray-600 mb-4">{description}</p>

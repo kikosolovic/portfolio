@@ -5,7 +5,7 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="flex justify-center space-x-4">
           <a
-            href="https://github.com"
+            href="https://github.com/kikosolovic"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-primary"
@@ -14,7 +14,7 @@ export default function Footer() {
             <span className="sr-only">GitHub</span>
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/kristi%C3%A1n-solovic-7b026232b/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-primary"
@@ -23,7 +23,7 @@ export default function Footer() {
             <span className="sr-only">LinkedIn</span>
           </a>
           <a
-            href="mailto:jane.doe@example.com"
+            href="mailto:kisolovic@gmail.com"
             className="text-muted-foreground hover:text-primary"
           >
             <LuMail />
@@ -31,7 +31,7 @@ export default function Footer() {
           </a>
         </div>
         <p className="text-center mt-4 text-sm text-muted-foreground">
-          © 2023 Suck. All rights reserved.
+          © 2024 Kristian Solovic. No rights reserved.
         </p>
       </div>
     </footer>

@@ -1,8 +1,9 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
-import pic from "../image2.png";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import pic from "/public/image2.png";
+import { LuMail } from "react-icons/lu";
 interface skilllevrl {
   skill: string;
   level: number;
@@ -57,34 +58,35 @@ export default function About() {
                 />
               </div>
               <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-white mb-2">
-                Kristian SoLoVic
+                Kristián Solovic
               </h2>
               <h3 className="text-xl text-center text-blue-600 dark:text-blue-400 mb-4">
-                Full Stack Developer
+                Software engineering student
               </h3>
               <div className="flex justify-center space-x-4 mb-6">
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/kristi%C3%A1n-solovic-7b026232b/"
                   className="text-gray-600 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400"
                 >
                   <FaLinkedin size={24} />
                 </a>
                 <a
-                  href="#"
+                  href="https://github.com/kikosolovic"
                   className="text-gray-600 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400"
                 >
                   <FaGithub size={24} />
                 </a>
                 <a
-                  href="#"
+                  href="mailto:kisolovic@gmail.com"
                   className="text-gray-600 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400"
                 >
-                  <FaTwitter size={24} />
+                  <LuMail size={24} />
                 </a>
               </div>
               <div className="flex justify-center">
                 <a
-                  href="#"
+                  href="/Solovic-resume.pdf"
+                  download="Solovic-resume"
                   className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110"
                 >
                   Download CV
@@ -103,7 +105,7 @@ export default function About() {
                 >
                   About Me
                 </button>
-                <button
+                {/* <button
                   className={`pb-2 ${
                     activeTab === "skills"
                       ? "border-b-2 border-blue-500 text-blue-500"
@@ -112,29 +114,33 @@ export default function About() {
                   onClick={() => setActiveTab("skills")}
                 >
                   Skills
-                </button>
+                </button> */}
               </div>
               {activeTab === "about" ? (
                 <div className="space-y-4 text-gray-600 dark:text-gray-300">
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Dicta odio aperiam nostrum vero labore rerum consequatur
-                    voluptas perspiciatis consequuntur modi, minus fuga,
-                    molestias quae inventore exercitationem ipsum optio ex
-                    delectus?
+                    As a software engineer, I’m not just proficient—I’m
+                    exceptional. With a mastery over multiple programming
+                    languages, frameworks, and architectural patterns, I deliver
+                    solutions that don’t just work—they excel. My code isn’t
+                    merely functional; it’s optimized, scalable, and built to
+                    outperform any standard in the industry.
                   </p>
                   <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Expedita impedit explicabo doloribus excepturi voluptates
-                    cupiditate vitae rem atque, recusandae placeat inventore qui
-                    quam repudiandae nihil eveniet, architecto quo facere
-                    necessitatibus.
+                    Every project I touch becomes a benchmark in efficiency and
+                    reliability. I design architectures that can withstand high
+                    traffic, support seamless scaling, and integrate
+                    effortlessly with the latest technologies. For me, system
+                    limitations are merely challenges to be overcome, and I do
+                    so with precision and finesse.
                   </p>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Exercitationem, incidunt dolores maxime accusamus delectus
-                    quam hic nihil ut expedita sint enim odio repudiandae, ad
-                    magnam officiis blanditiis! Ratione, saepe perferendis.
+                    I don’t just build software; I engineer experiences that
+                    keep users coming back. By blending intuitive UI/UX with a
+                    rock-solid backend, I create applications that are as
+                    powerful as they are enjoyable. When I engineer a product, I
+                    aim to set the standard, driving engagement and satisfaction
+                    like no one else can.
                   </p>
                 </div>
               ) : (

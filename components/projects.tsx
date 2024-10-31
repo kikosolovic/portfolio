@@ -1,11 +1,18 @@
 import React from "react";
+import ProjectData from "../public/Data";
 interface Project {
   title: string;
   description: string;
   technologies: string[];
+  projectId: number;
 }
 
-const ProjectCard = ({ title, description, technologies }: Project) => (
+const ProjectCard = ({
+  title,
+  description,
+  technologies,
+  projectId,
+}: Project) => (
   <div className="bg-white rounded-lg shadow-md p-6 mb-6">
     <h3 className="text-xl font-semibold mb-2">{title}</h3>
     <p className="text-gray-600 mb-4">{description}</p>
@@ -20,8 +27,7 @@ const ProjectCard = ({ title, description, technologies }: Project) => (
       ))}
     </div>
     <a
-      // href={link}
-      href="/project/1"
+      href={"/project/" + projectId + "/#."}
       className="text-blue-500 hover:text-blue-700 font-medium"
       target="_self"
       rel="noopener noreferrer"
@@ -32,30 +38,12 @@ const ProjectCard = ({ title, description, technologies }: Project) => (
 );
 
 const Projects = () => {
-  const projects = [
-    {
-      title: "Task Manager App",
-      description:
-        "A full-stack web application for managing tasks and to-do lists.",
-      technologies: ["React", "Node.js", "Express", "MongoDB"],
-      link: "https://github.com/yourusername/task-manager",
-    },
-    {
-      title: "Weather Forecast Dashboard",
-      description:
-        "A responsive web app that displays weather forecasts using a third-party API.",
-      technologies: ["JavaScript", "HTML", "CSS", "OpenWeatherMap API"],
-      link: "https://github.com/yourusername/weather-dashboard",
-    },
-    {
-      title: "E-commerce Platform",
-      description:
-        "An online shopping platform with user authentication and payment integration.",
-      technologies: ["React", "Redux", "Node.js", "PostgreSQL", "Stripe API"],
-      link: "https://github.com/yourusername/ecommerce-platform",
-    },
-  ];
-
+  const projects: Project[] = ProjectData.map((project, index) => ({
+    title: project.title,
+    description: project.description,
+    technologies: project.technologies,
+    projectId: index,
+  }));
   return (
     <section id="projects" className="py-16 bg-gray-100">
       <div className="container mx-auto px-4">

@@ -27,29 +27,22 @@ const Skills = () => {
     {
       title: "Programming Languages",
       icon: FaCode,
-      skills: ["JavaScript", "Python", "Java", "C++", "TypeScript"],
+      skills: ["JavaScript", "Python", "C#", "TypeScript", "Scala"],
     },
     {
       title: "Web Technologies",
       icon: FaServer,
-      skills: [
-        "HTML5",
-        "CSS3",
-        "React",
-        "Node.js",
-        "Express.js",
-        "RESTful APIs",
-      ],
+      skills: ["HTML/CSS", "Flask", "Node.js", "Nginx", "Angular", "ASP.NET"],
     },
     {
       title: "Databases",
       icon: FaDatabase,
-      skills: ["MySQL", "MongoDB", "PostgreSQL", "Redis"],
+      skills: ["MySQL", "MongoDB", "SQLite"],
     },
     {
       title: "Tools & Others",
       icon: FaCogs,
-      skills: ["Git", "Docker", "AWS", "Agile/Scrum", "Unit Testing", "CI/CD"],
+      skills: ["Git", "Docker", "Linux", "Agile/Scrum", "Jira", "CI/CD"],
     },
   ];
 

@@ -4,7 +4,7 @@ import SliderPro from "@/components/ui/SliderPro";
 
 export default function divs() {
   return (
-    <div className="bg-background-red">
+    <div className="bg-black">
       <div className="sued container mx-auto px-4">
         <SliderPro></SliderPro>;
       </div>

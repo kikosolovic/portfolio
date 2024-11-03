@@ -1,14 +1,9 @@
 "use client";
 import { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa"; // Icons for hamburger and close
-import { usePathname } from "next/navigation";
+import { FaBars, FaTimes } from "react-icons/fa";
 
-// function toggleMenu() {}
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const pathname = usePathname();
-  const isProjectPath = pathname?.split("/").includes("project");
 
   const handleToggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -39,7 +34,7 @@ export default function Navbar() {
                 href="../#skills"
                 className="hover:text-primary transition duration-300"
               >
-                Skills
+                Focus
               </a>
             </li>
             <li>
@@ -82,7 +77,7 @@ export default function Navbar() {
                 className="hover:text-primary"
                 onClick={handleToggleMenu}
               >
-                Skills
+                Focus
               </a>
             </li>
             <li>

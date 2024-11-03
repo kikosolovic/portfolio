@@ -18,11 +18,11 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
           src={project.mainImage}
           alt={project.title}
           fill
-          className="object-cover transition-transform duration-500 ease-in-out transform hover:scale-105"
+          className="opacity-80 object-cover transition-transform duration-500 ease-in-out transform hover:scale-105"
           priority
         />
-        <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-black/70 via-transparent to-black/70">
-          <h1 className="text-5xl font-extrabold text-white drop-shadow-lg animate-fadeIn">
+        <div className=" absolute inset-0 flex items-center justify-center bg-gradient-to-t from-black/70 via-transparent to-black/70">
+          <h1 className="text-7xl font-extrabold text-white drop-shadow-lg animate-fadeIn text-white">
             {project.title}
           </h1>
         </div>
@@ -31,37 +31,59 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
       <main className="container mx-auto px-4 py-8 space-y-12">
         <section className="mb-8 text-center">
           <h2 className="text-3xl font-semibold mb-4">Project Description</h2>
+          {project.text.split(";").map((section, index) => (
+            <div key={index}>
+              <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+                {section}
+              </p>
+              <br />
+            </div>
+          ))}
+        </section>
+        <section className="mb-8 text-center">
+          <h2 className="text-3xl font-semibold mb-4">Final Takeaway</h2>
+
           <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-            {project.text}
+            {project.takeaway}
           </p>
         </section>
-
-        <section className="text-center">
-          <h2 className="text-3xl font-semibold mb-6">Project Resources</h2>
-          <div className="flex justify-center space-x-6">
-            <Link
-              href={project.downloadLink}
-              className="flex items-center px-6 py-3 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 shadow-lg transition-transform transform hover:scale-105"
-            >
-              <FaFileDownload className="mr-2 h-5 w-5" />
-              Download Files
-            </Link>
-            <Link
-              href={project.githublink}
-              className="flex items-center px-6 py-3 bg-secondary text-secondary-foreground rounded-full hover:bg-secondary/90 shadow-lg transition-transform transform hover:scale-105"
-            >
-              <FaGithub className="mr-2 h-5 w-5" />
-              View on GitHub
-            </Link>
-          </div>
-        </section>
-
+        {!(!project.githublink && !project.downloadLink) ? (
+          <section className="text-center">
+            <h2 className="text-3xl font-semibold mb-6"> Resources</h2>
+            <div className="flex justify-center space-x-6">
+              {!project.downloadLink ? (
+                ""
+              ) : (
+                <a
+                  href={project.downloadLink}
+                  download="docs"
+                  className="flex items-center px-6 py-3 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 shadow-lg transition-transform transform hover:scale-105"
+                >
+                  <FaFileDownload className="mr-2 h-5 w-5" />
+                  Download Files
+                </a>
+              )}
+              {!project.githublink ? (
+                ""
+              ) : (
+                <Link
+                  target="_blank"
+                  href={project.githublink}
+                  className="flex items-center px-6 py-3 bg-secondary text-secondary-foreground rounded-full hover:bg-secondary/90 shadow-lg transition-transform transform hover:scale-105"
+                >
+                  <FaGithub className="mr-2 h-5 w-5" />
+                  View on GitHub
+                </Link>
+              )}
+            </div>
+          </section>
+        ) : (
+          ""
+        )}
         <section>
-          <h2 className="text-3xl font-semibold mb-4 text-center">
-            Project Gallery
-          </h2>
+          <h2 className="text-3xl font-semibold mb-4 text-center">Gallery</h2>
           <div className="max-w-8xl mx-auto">
-            <ImageSlider images={project.images} />
+            <ImageSlider images={project.images} projectname={project.title} />
           </div>
         </section>
       </main>

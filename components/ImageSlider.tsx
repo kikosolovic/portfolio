@@ -6,9 +6,13 @@ import { useEffect } from "react";
 
 type ImageGalleryProps = {
   images: string[];
+  projectname: string;
 };
 
-export default function ImageGallery({ images }: ImageGalleryProps) {
+export default function ImageGallery({
+  images,
+  projectname,
+}: ImageGalleryProps) {
   const [galleryOpened, setGalleryOpened] = useState(false);
   const [activeImageIndex, setActiveImageIndex] = useState<number | null>(null);
   const diffstyle: string[] = [
@@ -50,7 +54,7 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [galleryOpened, activeImageIndex]);
 
-  var a = -1;
+  let a = -1;
   return (
     <section className=" py-6d sm:py-8 lg:py-12select-none">
       <div className="max-w-screen-2xl px-4 mx-auto duration-1000 delay-300 opacity-100">
@@ -66,14 +70,14 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
                   height={10000}
                   onClick={() => handleImageClick(index)}
                   loading="lazy"
-                  alt="Photo by Minh Pham"
+                  alt={"Photo from " + projectname}
                   className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
                 />
 
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
 
                 <span className="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">
-                  VR
+                  {projectname}
                 </span>
               </a>
             );

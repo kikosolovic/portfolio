@@ -45,7 +45,7 @@ export default function About() {
       className="py-16 bg-gradient-to-br from-grey-50 to-red-100 dark:from-gray-800 dark:to-red-20 round"
     >
       <div className="container mx-auto px-4">
-        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-2xl overflow-hidden">
+        <div className=" dark:bg-gray-800 rounded-lg shadow-2xl overflow-hidden">
           <div className="md:flex">
             <div className="md:w-1/3 p-8">
               <div className="relative w-48 h-48 mx-auto mb-4">
@@ -61,7 +61,7 @@ export default function About() {
                 Kristián Solovic
               </h2>
               <h3 className="text-xl text-center text-blue-600 dark:text-blue-400 mb-4">
-                Software engineering student
+                Aspiring Software Engineer
               </h3>
               <div className="flex justify-center space-x-4 mb-6">
                 <a
